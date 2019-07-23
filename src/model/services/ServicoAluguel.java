@@ -7,12 +7,12 @@ public class ServicoAluguel {
 	
 	private Double precoPorDia;
 	private Double precoPorHora;
-	private TaxaServicoBrasil taxaServico;
 	
 	
+	private TaxaServico taxaServico;
 	
-
-	public ServicoAluguel(Double precoPorDia, Double precoPorHora, TaxaServicoBrasil taxaServico) {
+	
+	public ServicoAluguel(Double precoPorDia, Double precoPorHora, TaxaServico taxaServico) {
 		super();
 		this.precoPorDia = precoPorDia;
 		this.precoPorHora = precoPorHora;
@@ -20,6 +20,44 @@ public class ServicoAluguel {
 	}
 	
 	
+		
+	public Double getPrecoPorDia() {
+		return precoPorDia;
+	}
+
+
+	public void setPrecoPorDia(Double precoPorDia) {
+		this.precoPorDia = precoPorDia;
+	}
+
+
+	public Double getPrecoPorHora() {
+		return precoPorHora;
+	}
+
+
+
+	public void setPrecoPorHora(Double precoPorHora) {
+		this.precoPorHora = precoPorHora;
+	}
+
+
+	public TaxaServico getTaxaServico() {
+		return taxaServico;
+	}
+
+
+
+
+
+	public void setTaxaServico(TaxaServico taxaServico) {
+		this.taxaServico = taxaServico;
+	}
+
+
+
+
+
 	public void processoPagamento(AlugueisCarro alugueis) {
 		long t1 = alugueis.getInicio().getTime();
 		long t2 = alugueis.getFim().getTime();
